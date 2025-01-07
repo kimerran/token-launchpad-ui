@@ -7,8 +7,8 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">NFT Minting Site</h3>
-            <p className="text-sm">Discover, mint, and collect unique digital assets.</p>
+            <h3 className="text-lg font-semibold mb-4">Token Launchpad</h3>
+            <p className="text-sm">Launch your new ERC20 token today.</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center">
-          <p className="text-sm">&copy; {new Date().getFullYear()} NFT Minting Site. All rights reserved.</p>
+          <p className="text-sm">&copy; {new Date().getFullYear()} Token Launchpad. All rights reserved.</p>
         </div>
       </div>
     </footer>
