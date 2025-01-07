@@ -2,6 +2,9 @@
 
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
+import { useAccount, useEnsName } from 'wagmi'
+import { WalletOptions } from './WalletOptions'
+
 
 export default function ConnectWallet() {
   const [isConnected, setIsConnected] = useState(false)
@@ -22,6 +25,9 @@ export default function ConnectWallet() {
     setIsConnected(false)
     setWalletAddress('')
   }
+  const { address } = useAccount()
+
+  console.log(address)
 
   return (
     <div>
@@ -33,7 +39,10 @@ export default function ConnectWallet() {
           <Button variant="secondary" onClick={disconnectWallet}>Disconnect</Button>
         </div>
       ) : (
-        <Button variant="secondary" onClick={connectWallet}>Connect Wallet</Button>
+        <>
+          <appkit-button />
+        </>
+        // <Button variant="secondary" onClick={connectWallet}>Connect Wallet</Button>
       )}
     </div>
   )

@@ -1,13 +1,9 @@
-'use client'
+"use client"
 
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
+import { useState, useEffect } from "react"
+import Image from "next/image"
 
-const images = [
-  '/1.jpg',
-  '/2.jpg',
-  '/3.jpg',
-]
+const images = ["/1.jpg", "/2.jpg", "/3.jpg"]
 
 export default function HeroBanner() {
   const [currentImage, setCurrentImage] = useState(0)
@@ -29,9 +25,9 @@ export default function HeroBanner() {
           alt={`NFT Collection ${index + 1}`}
           fill
           style={{
-            objectFit: 'cover',
+            objectFit: "cover",
             opacity: index === currentImage ? 1 : 0,
-            transition: 'opacity 0.5s ease-in-out',
+            transition: "opacity 0.5s ease-in-out",
           }}
           priority={index === 0}
         />
@@ -46,7 +42,7 @@ export default function HeroBanner() {
           <button
             key={index}
             className={`w-3 h-3 rounded-full ${
-              index === currentImage ? 'bg-white' : 'bg-white/50'
+              index === currentImage ? "bg-white" : "bg-white/50"
             }`}
             onClick={() => setCurrentImage(index)}
             aria-label={`Go to slide ${index + 1}`}
@@ -56,4 +52,3 @@ export default function HeroBanner() {
     </div>
   )
 }
-
