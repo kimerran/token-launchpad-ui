@@ -11,8 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Textarea } from "@/components/ui/textarea"
-import { writeContract } from "viem/actions"
 import { abi } from "@/lib/abi"
 import { parseEther } from "viem"
 import { useWriteContract } from "wagmi"
@@ -40,13 +38,6 @@ export default function TokenSaleTab() {
 
     setMinting(true)
 
-    // string memory name,
-    // string memory symbol,
-    // uint256 totalSupply,
-    // uint256 saleSupply,
-    // uint256 tokenPrice,
-    // string memory referenceId
-
     writeContract({
       address: CONTRACT_ADDRESS,
       abi,
@@ -62,7 +53,6 @@ export default function TokenSaleTab() {
       value: parseEther("0.001"),
     })
 
-    // Simulating minting process
     setMinting(false)
   }
 
